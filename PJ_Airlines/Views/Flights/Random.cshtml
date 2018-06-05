@@ -1,0 +1,24 @@
+﻿@model PJ_Airlines.ViewModels.RandomFlightViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Flight.Name</h2>
+
+@if (Model.Passengers.Count == 0)
+{
+    <p>There are no passengers</p>
+}
+
+else
+
+{
+    <ul>
+        @foreach (var passenger in Model.Passengers)
+        {
+            <li>@passenger.Name</li>
+            <li>@passenger.Id</li>
+        }
+    </ul>
+}

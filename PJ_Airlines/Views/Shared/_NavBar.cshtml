@@ -1,0 +1,13 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">           
+            @Html.ActionLink("PJ_Airlines name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Flights", "Index", "Flights")</li>
+                <li>@Html.ActionLink("Passengers", "Index", "Passengers")</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PJ_Airlines.Models.Flight>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Flights</h2>
+
+@if (!Model.Any())
+{
+    <p>We do not have any Flights currently</p>
+}
+else
+{
+    <table class="table table-borderd table-hover">
+        <thead>
+            <tr>
+                <th>Flights</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(flight.Name, "Details", "Flights", new { id = flight.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
